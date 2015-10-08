@@ -5,7 +5,7 @@ describe SeedReport do
     expect( SeedReport::VERSION ).not_to be nil
   end
 
-  it 'has a #report_growth method' do
-    expect( SeedReport ).to respond_to(:report_growth)
+  it 'has a #for_model method' do
+    expect( SeedReport ).to respond_to(:for_model)
   end
 end

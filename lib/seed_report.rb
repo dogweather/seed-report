@@ -2,11 +2,11 @@ require "seed_report/version"
 
 module SeedReport
   class << self
-    def report_growth(of_model:, &block)
-      print "#{heading(of_model)} #{initial_count_display(of_model)}"
-      initial_count = of_model.count
+    def for_model(model, &block)
+      print "#{heading(model)} #{initial_count_display(model)}"
+      initial_count = model.count
       block.call
-      increase = of_model.count - initial_count
+      increase = model.count - initial_count
       puts final_count_display(increase)
     end
 
