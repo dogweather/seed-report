@@ -6,7 +6,7 @@ A readable summary of your Rails seed results.
 ![seed-report](https://cloud.githubusercontent.com/assets/150670/10386234/4abc2098-6e09-11e5-909e-b538391de1d7.png)
 
 
-**Step 1.** Wrap your model `create` and `save`'s with a request for a seed report:
+**Step 1.** Place your `create`'s and `save`'s in a request for a seed report:
 
 ```ruby
 SeedReport.for_model Model_class do
