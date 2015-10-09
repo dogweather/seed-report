@@ -1,28 +1,64 @@
 # SeedReport
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/seed_report`. To experiment with that code, run `bin/console` for an interactive prompt.
+## The Deliverable
+A readable summary of your Rails seed results, with minimal coding.
 
-TODO: Delete this and the text above, and describe your gem
+**Step 1.** Wrap your model `create` and `save`'s with a request for a seed report:
+
+```ruby
+SeedReport.for_model Model_class do
+  # A block which creates the Model_class seed instances.
+end
+```
+
+For example:
+
+```ruby
+SeedReport.for_model Country do
+  Country.find_or_create_by!(
+    name:        'United States',
+    alpha_2:     'us',
+    alpha_3:     'usa',
+    region_meta_name: 'state'
+  )
+end
+
+SeedReport.for_model Region do
+  us = Country.find_by! alpha_2: 'us'
+
+  Region.find_or_create_by!(
+    name:    'California',
+    slug:    'ca',
+    country:  us
+  )
+  Region.find_or_create_by!(
+    name:    'Nevada',
+    slug:    'nv',
+    country:  us
+  )
+end
+
+# etc.
+```
+
+**Step 2.** Run your seeds with `rake db:reset` (my favorite), `rake db:setup`,
+or `rake db:seed`.
+
+**Step 3.** Enjoy the simple summary output:
+
+![seed-report](https://cloud.githubusercontent.com/assets/150670/10386234/4abc2098-6e09-11e5-909e-b538391de1d7.png)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your Rails application's Gemfile:
 
 ```ruby
-gem 'seed_report'
+gem 'seed_report', group: :development
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install seed_report
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
@@ -32,10 +68,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/seed_report.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dogweather/seed_report.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
