@@ -1,7 +1,10 @@
 # SeedReport
 
 ## The Deliverable
-A readable summary of your Rails seed results, with minimal coding.
+A readable summary of your Rails seed results.
+
+![seed-report](https://cloud.githubusercontent.com/assets/150670/10386234/4abc2098-6e09-11e5-909e-b538391de1d7.png)
+
 
 **Step 1.** Wrap your model `create` and `save`'s with a request for a seed report:
 
@@ -44,9 +47,8 @@ end
 **Step 2.** Run your seeds with `rake db:reset` (my favorite), `rake db:setup`,
 or `rake db:seed`.
 
-**Step 3.** Enjoy the simple summary output:
+**Step 3.** Enjoy the simple summary output.
 
-![seed-report](https://cloud.githubusercontent.com/assets/150670/10386234/4abc2098-6e09-11e5-909e-b538391de1d7.png)
 
 ## Installation
 
