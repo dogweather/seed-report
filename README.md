@@ -1,7 +1,7 @@
 # SeedReport
 
 ## The Deliverable
-A readable summary of your Rails seed results.
+A readable summary of your Rails seed results. Doesn't disrupt your Seed file; takes care of the accounting.
 
 ```
 Country  initial count: 0, 1 created
