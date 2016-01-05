@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/dogweather/seed-report/badges/gpa.svg)](https://codeclimate.com/github/dogweather/seed-report)
+
 # SeedReport
 
 ## The Deliverable
