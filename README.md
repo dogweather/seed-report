@@ -48,10 +48,10 @@ end
 # etc.
 ```
 
-**Step 2.** Run your seeds with `rake db:reset` (my favorite), `rake db:setup`,
+**Step 2.** Run your seeds in the usual way: with `rake db:reset` (my favorite), `rake db:setup`,
 or `rake db:seed`.
 
-**Step 3.** Enjoy the simple summary output.
+**Step 3.** See a concise summary output of the changes made.
 
 
 ## Installation
