@@ -3,7 +3,11 @@
 ## The Deliverable
 A readable summary of your Rails seed results.
 
-![seed-report](https://cloud.githubusercontent.com/assets/150670/10386234/4abc2098-6e09-11e5-909e-b538391de1d7.png)
+```
+Country  initial count: 0, 1 created
+Region   initial count: 0, 5 created
+Agency   initial count: 0, 5 created
+```
 
 
 **Step 1.** Place your `create`'s and `save`'s in a request for a seed report:
